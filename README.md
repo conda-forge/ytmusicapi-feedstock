@@ -9,6 +9,12 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ytmusicapi-feed
 
 Summary: Unofficial API for YouTube Music
 
+Development: https://github.com/sigma67/ytmusicapi
+
+Documentation: https://ytmusicapi.readthedocs.io/
+
+ytmusicapi is a Python 3 library to send requests to the YouTube Music API. It emulates YouTube Music web client requests using the user's cookie data for authentication.
+
 Current build status
 ====================
 
