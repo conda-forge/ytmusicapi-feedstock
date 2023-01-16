@@ -1,5 +1,5 @@
 {% set name = "ytmusicapi" %}
-{% set version = "0.24.1" %}
+{% set version = "0.25.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ytmusicapi-{{ version }}.tar.gz
-  sha256: f0d62eb6467047cb50cec57362c3a8e87764899e966c87289c38dc3b082cdcf3
+  sha256: 8695ffaa6451c2f084d0de6321697a01991c61a55588adf49cf6c9c32643fab3
 
 build:
   number: 0
