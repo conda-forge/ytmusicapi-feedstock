@@ -1,11 +1,11 @@
-About ytmusicapi
-================
+About ytmusicapi-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ytmusicapi-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/sigma67/ytmusicapi
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ytmusicapi-feedstock/blob/main/LICENSE.txt)
 
 Summary: Unofficial API for YouTube Music
 
