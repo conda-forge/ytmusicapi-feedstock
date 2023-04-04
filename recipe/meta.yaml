@@ -9,9 +9,9 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ytmusicapi-{{ version }}.tar.gz
   sha256: aa3165100ff5c0e1f49f9a046312f878c31eea83fde14af0707e3368ae923fe4
-  
+
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
