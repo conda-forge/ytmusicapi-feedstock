@@ -1,5 +1,5 @@
 {% set name = "ytmusicapi" %}
-{% set version = "0.25.2" %}
+{% set version = "1.0.0" %}
 
 
 package:
@@ -8,19 +8,22 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ytmusicapi-{{ version }}.tar.gz
-  sha256: aa3165100ff5c0e1f49f9a046312f878c31eea83fde14af0707e3368ae923fe4
+  sha256: 3b174cec83e23bef3c9d15df5b9d9bc7c80a51377cdc50682da03b9d2c8a2589
 
 build:
-  number: 1
+  entry_points:
+    - ytmusicapi = ytmusicapi.setup:main
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - pip
     - python >=3.8
-    - setuptools-scm >=7
     - setuptools >=65
+    - setuptools-scm >=7
+    - requests
+    - pip
   run:
     - python >=3.8
     - requests >=2.22
@@ -28,9 +31,9 @@ requirements:
 test:
   imports:
     - ytmusicapi
-    - ytmusicapi.parsers
   commands:
     - pip check
+    - ytmusicapi --help
   requires:
     - pip
 
