@@ -43,7 +43,8 @@ about:
   license: MIT
   license_file: LICENSE
   doc_url: https://ytmusicapi.readthedocs.io/
-  description: ytmusicapi is a Python 3 library to send requests to the YouTube Music API. It emulates YouTube Music web client requests using the user's cookie data for authentication.
+  description: |
+    ytmusicapi is a Python 3 library to send requests to the YouTube Music API. It emulates YouTube Music web client requests using the user's cookie data for authentication.
 
 extra:
   recipe-maintainers:
