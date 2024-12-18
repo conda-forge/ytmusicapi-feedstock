@@ -1,5 +1,5 @@
 {% set name = "ytmusicapi" %}
-{% set version = "1.8.2" %}
+{% set version = "1.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ytmusicapi-{{ version }}.tar.gz
-  sha256: 454facdf5907c32b77cb035f54c76d5a9d3fb0316933b1a1cecd06110ff85ecf
+  sha256: 1f703ba5c9c09208cd124b9feb578d9ab39e558b6ca457ac037ea65e7db9b16c
 
 build:
   entry_points:
     - ytmusicapi = ytmusicapi.setup:main
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
