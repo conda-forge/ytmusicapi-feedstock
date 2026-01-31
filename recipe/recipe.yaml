@@ -1,0 +1,61 @@
+schema_version: 1
+
+context:
+  name: ytmusicapi
+  version: 1.11.5
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/ytmusicapi-${{ version }}.tar.gz
+  sha256: 48f35901291c8af9934ec0aa9cd6b9fd1a19c543f843c39c9e8b396356b47801
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - ytmusicapi = ytmusicapi.setup:main
+
+requirements:
+  host:
+    - python ${{ python_min }}*
+    - setuptools >=65
+    - setuptools-scm >=7
+    - requests
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - requests >=2.22
+
+tests:
+  - python:
+      imports:
+        - ytmusicapi
+      pip_check: true
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - ytmusicapi --help
+
+about:
+  summary: Unofficial API for YouTube Music
+  license: MIT
+  license_file: LICENSE
+  description: |
+    ytmusicapi is a Python 3 library to send requests to the YouTube Music API. It emulates YouTube Music web client requests using the user's cookie data for authentication.
+
+
+  homepage: https://github.com/sigma67/ytmusicapi
+  repository: https://github.com/sigma67/ytmusicapi
+  documentation: https://ytmusicapi.readthedocs.io/
+
+extra:
+  recipe-maintainers:
+    - HeavyTony2
