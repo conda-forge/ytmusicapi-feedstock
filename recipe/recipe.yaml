@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: ytmusicapi
-  version: "1.12.1"
+  version: "1.12.2"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/ytmusicapi-${{ version }}.tar.gz
-  sha256: 4e33f424db311ece1b9e5f29a51ade46b0697f6e2f284f8a40bcbd7219772755
+  sha256: 8674ab9a02d2c1bdf137166c78dcf4c4568360e46ede1b31549edf6750db530a
 
 build:
   number: 0
@@ -36,7 +36,9 @@ tests:
       imports:
         - ytmusicapi
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version: 
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - pip
